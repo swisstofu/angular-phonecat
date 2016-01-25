@@ -1,8 +1,5 @@
 'use strict';
 
-angular.module('phonecat.list')
-  .controller('PhoneListCtrl', PhoneListCtrl);
-
 PhoneListCtrl.$inject = ['Phone'];
 
 function PhoneListCtrl(Phone) {
@@ -10,3 +7,5 @@ function PhoneListCtrl(Phone) {
   vm.phones = Phone.query();
   vm.orderProp = 'age';
 }
+
+export default PhoneListCtrl;
